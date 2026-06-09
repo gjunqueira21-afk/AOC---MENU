@@ -42,16 +42,13 @@ document.getElementById('logout-btn').addEventListener('click', function () {
 
 // ── NAVIGATION ─────────────────────────────────────────────
 function navigate(sectionId) {
-  // hide all sections
   document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
 
-  // show target
   const section = document.getElementById('section-' + sectionId);
   if (section) section.classList.add('active');
 
-  // highlight nav item
-  const navItem = document.querySelector(`.nav-item[data-section="${sectionId}"]`);
+  const navItem = document.querySelector('.nav-item[data-section="' + sectionId + '"]');
   if (navItem) navItem.classList.add('active');
 
   // close mobile sidebar
@@ -80,11 +77,17 @@ document.addEventListener('click', function (e) {
 });
 
 // ── MOBILE MENU TOGGLE ─────────────────────────────────────
-document.getElementById('menu-toggle').addEventListener('click', function () {
+document.getElementById('menu-toggle').addEventListener('click', function (e) {
+  e.stopPropagation();
   document.getElementById('sidebar').classList.toggle('open');
 });
 
-// Close sidebar on outside tap (mobile)
+// Taps inside the sidebar should not close it
+document.getElementById('sidebar').addEventListener('click', function (e) {
+  e.stopPropagation();
+});
+
+// Close sidebar when tapping the main content area (mobile)
 document.getElementById('content').addEventListener('click', function () {
   document.getElementById('sidebar').classList.remove('open');
 });
