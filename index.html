@@ -12,8 +12,13 @@
   <div id="login-screen">
     <div class="login-box">
       <div class="login-logo">
-        <span class="logo-text">Álamos<span class="logo-dot">◆</span></span>
-        <span class="logo-sub">GESTÃO DE RECURSOS</span>
+        <svg viewBox="0 0 200 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Álamos Gestão de Recursos">
+          <text x="38" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="400" fill="#e4e8f0" letter-spacing="-0.5">Álamos</text>
+          <text x="38" y="54" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#2e7d52" letter-spacing="3.5">GESTÃO DE RECURSOS</text>
+          <!-- leaf icon -->
+          <path d="M18 8 C18 8, 28 14, 28 24 C28 32, 22 38, 18 40 C14 38, 8 32, 8 24 C8 14, 18 8, 18 8Z" fill="#2e7d52"/>
+          <path d="M18 40 C18 40, 18 28, 18 16" stroke="#0b0e12" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
       </div>
       <h2 class="login-title">Portal Interno</h2>
       <p class="login-desc">Acesso restrito a bankers e equipe interna.</p>
@@ -34,8 +39,12 @@
     <!-- SIDEBAR -->
     <aside id="sidebar">
       <div class="sidebar-logo">
-        <span class="logo-text">Álamos<span class="logo-dot">◆</span></span>
-        <span class="logo-sub">GESTÃO DE RECURSOS</span>
+        <svg viewBox="0 0 200 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Álamos">
+          <text x="38" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="400" fill="#e4e8f0" letter-spacing="-0.5">Álamos</text>
+          <text x="38" y="54" font-family="'Segoe UI', system-ui, sans-serif" font-size="9" fill="#2e7d52" letter-spacing="3.5">GESTÃO DE RECURSOS</text>
+          <path d="M18 8 C18 8, 28 14, 28 24 C28 32, 22 38, 18 40 C14 38, 8 32, 8 24 C8 14, 18 8, 18 8Z" fill="#2e7d52"/>
+          <path d="M18 40 C18 40, 18 28, 18 16" stroke="#0f1217" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
       </div>
 
       <nav class="sidebar-nav">
@@ -275,31 +284,98 @@
       <section id="section-offshore" class="section">
         <div class="section-header">
           <h1>Carteiras <span class="accent">Offshore</span></h1>
-          <p class="section-desc">Interactive Brokers — Plural Advisor. Performance separada por perfil de risco.</p>
+          <p class="section-desc">Interactive Brokers · Plural Advisor — Retorno Time-Weighted (TWR) em USD. Atualizado em Junho/2026.</p>
         </div>
 
-        <div class="product-block">
-          <div class="offshore-placeholder">
-            <div class="offshore-icon">🌐</div>
-            <h3>Atualização Mensal</h3>
-            <p>Os resultados das carteiras offshore (Interactive Brokers / Plural Advisor) são atualizados mensalmente.<br/>
-            Em breve os dados de performance por perfil estarão disponíveis aqui.</p>
-            <div class="offshore-profiles">
-              <div class="profile-card coming">
-                <span class="profile-label">Perfil Conservador</span>
-                <span class="profile-status">Em breve</span>
+        <div class="offshore-download-row">
+          <p>Relatório institucional completo com composição por classe de ativo, Sharpe ratio e drawdown máximo por perfil.</p>
+          <a href="downloads/Performance_Carteiras_Offshore_Jun2026.pdf" download class="btn-download">
+            ↓ Baixar Relatório Completo
+          </a>
+        </div>
+
+        <div class="offshore-grid">
+          <!-- Conservador -->
+          <div class="offshore-profile-card conservador">
+            <div class="op-label">Perfil 01</div>
+            <div class="op-name">Conservador</div>
+            <div class="op-return pos">+4,35%</div>
+            <div class="op-period">27/fev → 05/jun · 2026 · TWR · USD</div>
+            <div class="op-stats">
+              <div class="op-stat">
+                <span class="op-stat-label">Sharpe</span>
+                <span class="op-stat-val">1,94</span>
               </div>
-              <div class="profile-card coming">
-                <span class="profile-label">Perfil Moderado</span>
-                <span class="profile-status">Em breve</span>
+              <div class="op-stat">
+                <span class="op-stat-label">Vol. Diária</span>
+                <span class="op-stat-val">0,39%</span>
               </div>
-              <div class="profile-card coming">
-                <span class="profile-label">Perfil Arrojado</span>
-                <span class="profile-status">Em breve</span>
+              <div class="op-stat">
+                <span class="op-stat-label">Drawdown Máx.</span>
+                <span class="op-stat-val">1,73%</span>
+              </div>
+              <div class="op-stat">
+                <span class="op-stat-label">Renda Fixa</span>
+                <span class="op-stat-val">77,6%</span>
               </div>
             </div>
-            <p class="offshore-contact">Para abertura de conta: <a href="#" data-section="ib" class="link-nav">ver Manual IB →</a></p>
           </div>
+
+          <!-- Moderado -->
+          <div class="offshore-profile-card moderado">
+            <div class="op-label">Perfil 02</div>
+            <div class="op-name">Moderado</div>
+            <div class="op-return pos">+7,60%</div>
+            <div class="op-period">01/jan → 05/jun · 2026 · TWR · USD</div>
+            <div class="op-stats">
+              <div class="op-stat">
+                <span class="op-stat-label">Sharpe</span>
+                <span class="op-stat-val">1,71</span>
+              </div>
+              <div class="op-stat">
+                <span class="op-stat-label">Vol. Diária</span>
+                <span class="op-stat-val">0,50%</span>
+              </div>
+              <div class="op-stat">
+                <span class="op-stat-label">Drawdown Máx.</span>
+                <span class="op-stat-val">2,94%</span>
+              </div>
+              <div class="op-stat">
+                <span class="op-stat-label">Renda Fixa</span>
+                <span class="op-stat-val">53,4%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Agressivo -->
+          <div class="offshore-profile-card agressivo">
+            <div class="op-label">Perfil 03</div>
+            <div class="op-name">Agressivo</div>
+            <div class="op-return pos">+20,86%</div>
+            <div class="op-period">01/jan → 05/jun · 2026 · TWR · USD</div>
+            <div class="op-stats">
+              <div class="op-stat">
+                <span class="op-stat-label">Sharpe</span>
+                <span class="op-stat-val">2,32</span>
+              </div>
+              <div class="op-stat">
+                <span class="op-stat-label">Vol. Diária</span>
+                <span class="op-stat-val">1,12%</span>
+              </div>
+              <div class="op-stat">
+                <span class="op-stat-label">Drawdown Máx.</span>
+                <span class="op-stat-val">6,17%</span>
+              </div>
+              <div class="op-stat">
+                <span class="op-stat-label">Renda Variável</span>
+                <span class="op-stat-val">55,9%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="disclaimer">
+          Retornos calculados pelo método Time-Weighted Return (TWR), em USD, diretamente pelo Interactive Brokers PortfolioAnalyst — sem ajustes manuais. Resultados passados não constituem promessa ou garantia de retornos futuros. Carteiras individuais podem variar conforme aportes, perfil e janela de análise. Aporte mínimo: USD 100.000. Para abertura de conta: <a href="#" data-section="ib" class="link-nav">ver Manual IB →</a>
         </div>
       </section>
 
